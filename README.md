@@ -1,5 +1,5 @@
 ## 📄 Mini Project Report
 
-You can download the project documentation here:
+You can view or download the full report here:
 
-👉 [Download Mini Project Report](./Mini.project.dbms.docx)
+👉 [Download Mini Project Report (PDF)](./Mini.project.dbms.pdf)
