@@ -1,0 +1,70 @@
+(A) Entities and Their Attributes
+1. Airline
+Attributes:
+AirlineID (Primary Key)
+AirlineName
+ContactNumber
+OperatingRegion
+Purpose: Represents different airline companies operating flights.
+
+2. Flight
+Attributes:
+FlightID (Primary Key)
+FlightNumber
+DepartureDateTime
+ArrivalDateTime
+AvailableSeats
+DestinationAirportCode (Foreign Key referencing Airport)
+Purpose: Contains details about individual flights.
+
+3. Airport
+Attributes:
+AirportCode (Primary Key)
+AirportName
+Location
+Facilities
+Purpose: Stores information about various airports.
+
+4. Passenger
+Attributes:
+PassengerID (Primary Key)
+FirstName
+LastName
+Email
+PassportNumber
+Purpose: Stores details of passengers booking flights.
+
+5. Booking
+Attributes:
+BookingID (Primary Key)
+FlightID (Foreign Key referencing Flight)
+PassengerID (Foreign Key referencing Passenger)
+BookingDate
+Purpose: Represents a booking made by a passenger for a particular flight.
+
+6. Payment
+Attributes:
+PaymentID (Primary Key)
+BookingID (Foreign Key referencing Booking)
+Amount
+PaymentMethod
+PaymentStatus
+TransactionDateTime
+Purpose: Stores payment details related to a booking.
+
+(B) Relationships:-
+1) Airline and Flight: Not directly shown in the diagram, but typically a Flight would be linked to an Airline. This can be added by introducing AirlineID as a Foreign Key in the Flight table.
+2) Flight → Airport:Flight has a foreign key DestinationAirportCode referencing AirportCode in the Airport entity. This indicates the destination airport of the flight.
+3) Booking → Flight and Passenger:Each Booking is linked to one Flight and one Passenger, indicated by foreign keys FlightID and PassengerID.
+4) Payment → Booking:Each Payment is associated with a Booking, indicating the transaction done for a flight reservation.
+
+(C) Functional Flow:-
+1) Passenger Registration: A passenger's data is stored in the Passenger entity.
+2) Flight Information: Airlines offer multiple flights, and each flight has timing and seat availability stored in the Flight entity.
+3) Booking: A passenger books a flight, and this booking is stored in the Booking table.
+4) Payment: Once the booking is done, the passenger completes the payment, and that is stored in the Payment table.
+5) Airport Mapping: Each flight’s destination is mapped to an airport using DestinationAirportCode.
+
+(D) Normalization and Design Comments
+1) The design is well-normalized, avoiding redundancy and maintaining data integrity.
+2) It separates data logically (e.g., separating Payment from Booking, and Booking from Passenger and Flight).
