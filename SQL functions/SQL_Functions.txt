@@ -1,0 +1,56 @@
+1. Aggregate Functions: These functions operate on a set of values and return a single value.
+
+| Function  | Description               |
+| --------- | ------------------------- |
+| `COUNT()` | Counts the number of rows |
+| `SUM()`   | Returns the total sum     |
+| `AVG()`   | Returns the average value |
+| `MAX()`   | Returns the highest value |
+| `MIN()`   | Returns the lowest value  |
+
+2. Numeric Functions: These are used to perform operations on numeric data types.
+
+| Function      | Description                       |
+| ------------- | --------------------------------- |
+| `ROUND(x, d)` | Rounds number `x` to `d` decimals |
+| `CEIL(x)`     | Returns the smallest integer ≥ x  |
+| `FLOOR(x)`    | Returns the largest integer ≤ x   |
+| `ABS(x)`      | Returns the absolute value        |
+| `POWER(x, y)` | Returns x raised to the power y   |
+
+3. Date Functions: These are used to handle and manipulate date and time values.
+
+| Function                      | Description                   |
+| ----------------------------- | ----------------------------- |
+| `NOW()`                       | Returns current date and time |
+| `CURDATE()`                   | Returns current date          |
+| `DATEDIFF(d1, d2)`            | Difference between two dates  |
+| `DATE_ADD(d, INTERVAL n DAY)` | Adds days to a date           |
+| `YEAR(date)`                  | Extracts the year from a date |
+
+4. String Functions: Used to perform operations on string/text data.
+
+| Function                        | Description                  |
+| ------------------------------- | ---------------------------- |
+| `LENGTH(str)`                   | Returns length of the string |
+| `UPPER(str)`                    | Converts string to uppercase |
+| `LOWER(str)`                    | Converts string to lowercase |
+| `SUBSTRING(str, start, length)` | Extracts a substring         |
+| `CONCAT(s1, s2)`                | Concatenates two strings     |
+
+5. Conversion Functions: These convert data from one type to another.
+
+| Function           | Description                              |
+| ------------------ | ---------------------------------------- |
+| `CAST(x AS type)`  | Converts value `x` to specified type     |
+| `CONVERT(x, type)` | Similar to `CAST`, varies by SQL dialect |
+
+SUMMARY TABLE
+| Category   | Common Functions                                  |
+| ---------- | ------------------------------------------------- |
+| Aggregate  | `COUNT`, `SUM`, `AVG`, `MIN`, `MAX`               |
+| Numeric    | `ROUND`, `CEIL`, `FLOOR`, `ABS`, `POWER`          |
+| Date       | `NOW`, `CURDATE`, `DATEDIFF`, `DATE_ADD`, `YEAR`  |
+| String     | `LENGTH`, `UPPER`, `LOWER`, `SUBSTRING`, `CONCAT` |
+| Conversion | `CAST`, `CONVERT`                                 |
+
